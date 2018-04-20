@@ -15,6 +15,10 @@
                     @endif
 
                     You are logged in!
+                    @foreach ($categories as $category)
+                       <br> {{$category->name}}
+                    @endforeach
+                    
                 </div>
             </div>
         </div>
