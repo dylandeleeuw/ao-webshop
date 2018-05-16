@@ -22,5 +22,20 @@ class ProductSeeder extends Seeder
             'description' => 'lorem',
             'price' => 434.99,
         ]);
+        DB::table('products')->insert([
+            'name' => 'wasmashine',
+            'description' => 'lorem',
+            'price' => 750.00,
+        ]);
+        DB::table('products')->insert([
+            'name' => 'magnetron',
+            'description' => 'lorem',
+            'price' => 249.99,
+        ]);
+        DB::table('products')->insert([
+            'name' => 'televiesie',
+            'description' => 'lorem',
+            'price' => 699.99,
+        ]);
     }
 }

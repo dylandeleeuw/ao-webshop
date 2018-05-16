@@ -30,6 +30,6 @@ class CategoryController extends Controller
     {
         $products = Category::getProductsByCategory($id);
 
-        return view('products', ['products' => $products]);
+        return view('productlist', ['products' => $products]);
     }
 }

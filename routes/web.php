@@ -19,4 +19,4 @@ Auth::routes();
 
 Route::get('categories', 'CategoryController@index')->name('category');
 Route::get('category/{id}', 'CategoryController@ProductsFromCategory');
-
+Route::get('product/{id}', 'productController@index');
