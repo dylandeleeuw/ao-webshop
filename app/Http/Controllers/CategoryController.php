@@ -20,9 +20,14 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
     	$categories = Category::all();
+        $request->session()->put('name', 'test');
+
+        $data = $request->session()->all();
+        dd($data);
+
         return view('categories', ['categories' => $categories]);
     }
 

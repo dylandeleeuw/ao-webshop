@@ -11,7 +11,10 @@
                    <p>name: {{$productInfo->name}}</p>
                     <p>price: {{$productInfo->price}}</p>
                     <p>description: {{$productInfo->description}}</p>
-                    
+                    {{ Form::open(array('url' => 'foo/bar')) }}
+                        //
+                    {{ Form::close() }}
+                                        
                 </div>
             </div>
         </div>
