@@ -15,12 +15,12 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('client_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->string('status');
             $table->timestamps();
         });
         Schema::table('orders', function (Blueprint $table) {
-            $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

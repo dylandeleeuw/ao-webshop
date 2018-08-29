@@ -16,7 +16,7 @@ class CreateOrderlinesTable extends Migration
         Schema::create('orderlines', function (Blueprint $table) {
             $table->integer('order_id')->unsigned();
             $table->integer('product_id')->unsigned();
-            $table->integer('number_of');
+            $table->integer('quantity');
         });
         Schema::table('orderlines', function (Blueprint $table) {
             $table->foreign('order_id')->references('id')->on('orders');

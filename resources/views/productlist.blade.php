@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     @foreach ($products as $product)
-                       <a href="{{url('/')}}/product/{{$product->id}}"> {{$product->name}}</a><br>
+                       <a href="/product/{{$product->id}}"> {{$product->name}}</a><br>
                     @endforeach
                     
                 </div>

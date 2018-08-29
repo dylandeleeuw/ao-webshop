@@ -23,10 +23,10 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
     	$categories = Category::all();
-        $request->session()->put('name', 'test');
+        //$request->session()->put('name', 'test');
 
-        $data = $request->session()->all();
-        dd($data);
+        //$data = $request->session()->all();
+       // dd($data);
 
         return view('categories', ['categories' => $categories]);
     }

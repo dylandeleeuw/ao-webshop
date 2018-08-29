@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/categories');
 });
 
 Auth::routes();
@@ -20,3 +20,10 @@ Auth::routes();
 Route::get('categories', 'CategoryController@index')->name('category');
 Route::get('category/{id}', 'CategoryController@ProductsFromCategory');
 Route::get('product/{id}', 'productController@index');
+Route::get('cart', 'ShoppingCartController@index');
+Route::get('order', 'OrderController@index');
+Route::post('orderline', 'OrderlineController@index');
+Route::post('cart/add', 'ShoppingCartController@add');
+Route::post('cart/edit', 'ShoppingCartController@edit');
+Route::post('cart/delete', 'ShoppingCartController@delete');
+Route::post('order', 'OrderController@createOrder');

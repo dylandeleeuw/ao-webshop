@@ -10,18 +10,18 @@ class Product_CategorySeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        DB::table('products_categories')->insert([
-            'product_id' => '1',
-            'category_id' => '1',
-        ]);
-        DB::table('products_categories')->insert([
-            'product_id' => '2',
-            'category_id' => '1',
-        ]);
-        DB::table('products_categories')->insert([
-            'product_id' => '3',
-            'category_id' => '1',
-        ]);
-    }
+    {   
+
+        $x=1;
+        for ($i=1;$i<=5;$i++) {
+            for ($j=1;$j<=5;$j++) {
+                
+                DB::table('products_categories')->insert([
+                    'product_id' => $x,
+                    'category_id' => $i,
+                ]);
+                $x++;
+            }  
+        }  
+    } 
 }
